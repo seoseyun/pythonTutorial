@@ -4,12 +4,12 @@ import random
 
 def getTargetArr(numCount):
     tempArr = []
-    while True:
-        randomNum = random.randint(0,9)
-        if not randomNum in tempArr:
-            tempArr.append(randomNum)
-        if len(tempArr) >= numCount:
-            return tempArr
+    #while로 서로다른 값이 numCount갯수만큼 나올떄까지 while을 돌렷지만 필요없는 loop로 인해수정함
+    numCol = list(range(10))
+    random.shuffle(numCol)
+    for i in range(numCount):
+        tempArr.append(numCol[i])
+    return tempArr
 
 def startDisplay(numCount):
     print('I am thinking of a ' + str(numCount) + '-digit number.Tryto guess what it is.')
