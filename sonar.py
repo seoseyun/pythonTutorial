@@ -81,7 +81,7 @@ gameCount= 0
 treasureBox = makeTreasureBox(3)
 theBoard = makeNewSonarBoard()
 inputCol = []
-print(treasureBox)
+
 while gameCount <14:
     checkTreasure = False
     gameCount +=1
@@ -98,3 +98,8 @@ while gameCount <14:
         print()
         print('sucess find Treasure!!')
     print()
+    if len(treasureBox) == 0:
+        print('game clear')
+        sys.exit()
+print('game over')
+sys.exit()
