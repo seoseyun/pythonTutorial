@@ -18,6 +18,6 @@ for i in range(20000):
     w = random.randint(35,100)
     label = calc_bmi(h,w)
     cnt[label] += 1
-    fp.write("{0},{1},{2}".format(h,w,label))
+    fp.write("{0},{1},{2}\r\n".format(h,w,label))
 fp.close()
 print("ok",cnt)
